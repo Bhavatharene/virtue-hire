@@ -80,7 +80,7 @@ public class HrService {
 
         // Free trial → within 3 months of registration
         if (hr.getRegisteredAt() != null &&
-                hr.getRegisteredAt().plusMonths(3).isAfter(LocalDateTime.now())) {
+                hr.getRegisteredAt().plusMinutes(3).isAfter(LocalDateTime.now())) {
             return true;
         }
 

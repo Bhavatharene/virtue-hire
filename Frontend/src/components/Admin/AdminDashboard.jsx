@@ -10,7 +10,8 @@ import {
   CheckCircle,
   ChevronRight,
   RefreshCw,
-  Search
+  Search,
+  Plus
 } from "lucide-react";
 import "./AdminDashboard.css";
 
@@ -59,6 +60,10 @@ export default function AdminDashboard() {
     }
   };
 
+  const handleAddClick = () => {
+    console.log("Add button clicked");
+  };
+
   if (loading) {
     return (
       <div className="adm-loading-screen">
@@ -72,9 +77,18 @@ export default function AdminDashboard() {
     <AdminLayout
       description="Monitor platform growth, revenue, HR operations, and assessment activity from one control center."
       actions={
-        <button onClick={fetchDashboard} className="adm-refresh-btn">
-          <RefreshCw size={18} /> Refresh
-        </button>
+        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+          <button 
+            onClick={handleAddClick} 
+            className="adm-add-btn"
+            title="Add new item"
+          >
+            <Plus size={18} />
+          </button>
+          <button onClick={fetchDashboard} className="adm-refresh-btn">
+            <RefreshCw size={18} /> Refresh
+          </button>
+        </div>
       }
     >
       <div className="adm-dashboard-body">

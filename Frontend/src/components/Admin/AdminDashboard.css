@@ -602,4 +602,28 @@ td {
     .adm-nav-link {
         padding: 10px 12px;
     }
+    .adm-add-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+  color: white;
+}
+
+.adm-add-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #059669, #047857);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.adm-add-btn:active {
+  transform: scale(0.98);
+}
 }
