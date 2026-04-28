@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HR Candidate Criteria</title>
+</head>
+<body>
+    <h2>Enter Candidate Selection Criteria</h2>
+
+    <form th:action="@{/hr/criteria/add}" method="post">
+        <label>Minimum Qualification:</label>
+        <input type="text" name="minQualification" required><br><br>
+
+        <label>Minimum Experience (Years):</label>
+        <input type="number" name="minExperience" required><br><br>
+
+        <label>Required Skills (comma separated):</label>
+        <input type="text" name="requiredSkills" required><br><br>
+
+        <label>Minimum Age:</label>
+        <input type="number" name="minAge"><br><br>
+
+        <label>Maximum Age:</label>
+        <input type="number" name="maxAge"><br><br>
+
+        <button type="submit">Submit Criteria</button>
+    </form>
+
+    <div th:if="${message}">
+        <p th:text="${message}"></p>
+    </div>
+</body>
+</html>

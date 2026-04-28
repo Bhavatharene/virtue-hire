@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HR Welcome</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container card */
+        .welcome-container {
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Highlighted welcome message */
+        p span {
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Logout link styled as button */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Welcome HR</h2>
+        <p>Welcome, <span th:text="${name}">Name</span>!</p>
+        <a th:href="@{/hrs/login}">Logout</a>
+    </div>
+</body>
+</html>

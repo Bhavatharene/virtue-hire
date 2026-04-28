@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>HR List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 95%;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HR List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>ID Proof</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="hr : ${hrs}">
+                    <td th:text="${hr.id}"></td>
+                    <td th:text="${hr.fullName}"></td>
+                    <td th:text="${hr.email}"></td>
+                    <td>
+                        <a th:if="${hr.idProofPath != null}" 
+                           th:href="@{/hrs/file/{file}(file=${hr.idProofPath})}" target="_blank">
+                           View ID Proof
+                        </a>
+                        <span th:if="${hr.idProofPath == null}">Not Uploaded</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

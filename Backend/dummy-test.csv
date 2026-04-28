@@ -1,0 +1,7 @@
+level,text,option1,option2,option3,option4,correctAnswer,sectionName
+1,What does HTML stand for?,Hyper Text Markup Language,High Tech Machine Language,Hyperlinks and Text Markup Language,Home Tool Markup Language,Hyper Text Markup Language,Web Basics
+1,Which property is used to change the background color?,bgcolor,color,background-color,bg-color,background-color,Web Basics
+2,What is the correct JavaScript syntax to change HTML content?,document.getElementById("demo").innerHTML = "Hello World!",document.getElement("p").innerHTML = "Hello World!","#demo.innerHTML = 'Hello World!'","document.getElementByName('p').innerHTML = 'Hello World'",document.getElementById("demo").innerHTML = "Hello World!",JS Logic
+2,How do you write "Hello World" in an alert box?,msgBox("Hello World");,alertBox("Hello World");,msg("Hello World");,alert("Hello World");,alert("Hello World");,JS Logic
+3,Which company developed React?,Google,Facebook,Amazon,Microsoft,Facebook,Frameworks
+3,What is the hook used to manage state in a functional component?,useEffect,useContext,useState,useReducer,useState,Frameworks
