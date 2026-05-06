@@ -617,6 +617,346 @@
   background: linear-gradient(180deg, #fffdf7 0%, #ffffff 100%);
 }
 
+.resume-template-mini-preview {
+  width: 88%;
+  min-height: 132px;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-template-mini-preview span {
+  display: block;
+  border-radius: 999px;
+}
+
+.mini-header,
+.mini-body {
+  display: grid;
+  gap: 7px;
+}
+
+.mini-header span:first-child {
+  width: 58%;
+  height: 9px;
+  background: #1f2937;
+}
+
+.mini-header span:last-child {
+  width: 42%;
+  height: 6px;
+  background: #64748b;
+}
+
+.mini-body span {
+  height: 5px;
+  background: #cbd5e1;
+}
+
+.mini-body span:nth-child(2) {
+  width: 82%;
+}
+
+.mini-body span:nth-child(3) {
+  width: 68%;
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: auto;
+}
+
+.mini-grid span {
+  height: 38px;
+  border-radius: 10px;
+  background: #e2e8f0;
+}
+
+.mini-classic {
+  align-items: center;
+}
+
+.mini-classic .mini-header {
+  justify-items: center;
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #111827;
+}
+
+.mini-modern .mini-header span:first-child {
+  height: 13px;
+}
+
+.mini-modern {
+  border-left: 5px solid #111827;
+}
+
+.mini-executive {
+  display: grid;
+  grid-template-columns: 36% 1fr;
+  gap: 10px;
+}
+
+.mini-executive::before {
+  content: "";
+  display: block;
+  min-height: 104px;
+  border-radius: 10px;
+  background: #1f2937;
+}
+
+.mini-executive .mini-grid {
+  display: none;
+}
+
+.mini-structured {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.mini-structured::before {
+  content: "";
+  display: block;
+  height: 30px;
+  margin: 0 -14px 2px;
+  background: #1e3a8a;
+}
+
+.mini-elegant {
+  align-items: center;
+}
+
+.mini-elegant .mini-header {
+  justify-items: center;
+  width: 100%;
+  padding: 8px 0;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.ats-template {
+  min-height: 640px;
+  border: 1px solid #dbe4f0;
+  background: #fff;
+  color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow: hidden;
+}
+
+.ats-template h2,
+.ats-template h4,
+.ats-template p,
+.ats-template ul {
+  margin-top: 0;
+}
+
+.ats-template h2 {
+  margin-bottom: 6px;
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: 0;
+}
+
+.ats-template header strong {
+  display: block;
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.ats-template header p {
+  margin: 10px 0 0;
+  color: #475569;
+  overflow-wrap: anywhere;
+}
+
+.ats-template-section {
+  margin-top: 22px;
+}
+
+.ats-template-section h4 {
+  margin-bottom: 9px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.ats-template-section p,
+.ats-template-section li {
+  margin-bottom: 0;
+  color: #475569;
+}
+
+.ats-template-section ul {
+  padding-left: 18px;
+}
+
+.ats-template-item {
+  margin-bottom: 14px;
+}
+
+.ats-template-item:last-child {
+  margin-bottom: 0;
+}
+
+.ats-template-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+
+.ats-template-item-head strong {
+  color: #111827;
+}
+
+.ats-template-item-head span {
+  color: #64748b;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.ats-template-item p {
+  margin: 5px 0 0;
+}
+
+.ats-template-skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ats-template-skill-list span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.ats-template-centered-header {
+  text-align: center;
+}
+
+.ats-template-classic {
+  padding: 42px;
+}
+
+.ats-template-classic header {
+  padding-bottom: 18px;
+  border-bottom: 2px solid #111827;
+}
+
+.ats-template-classic .ats-template-section h4 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #cbd5e1;
+  color: #111827;
+}
+
+.ats-template-modern {
+  padding: 42px;
+}
+
+.ats-template-modern h2 {
+  font-size: 2.35rem;
+  font-weight: 400;
+}
+
+.ats-template-modern header {
+  padding-left: 18px;
+  border-left: 5px solid #111827;
+}
+
+.ats-template-modern .ats-template-section h4 {
+  color: #111827;
+}
+
+.ats-template-executive {
+  display: grid;
+  grid-template-columns: minmax(160px, 36%) 1fr;
+}
+
+.ats-template-executive aside {
+  padding: 30px 24px;
+  background: #1f2937;
+  color: #fff;
+}
+
+.ats-template-executive main {
+  padding: 34px 30px;
+}
+
+.ats-template-executive aside h4,
+.ats-template-executive aside p,
+.ats-template-executive aside li,
+.ats-template-executive aside span {
+  color: #fff;
+}
+
+.ats-template-executive aside .ats-template-section h4 {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 7px;
+}
+
+.ats-template-executive aside .ats-template-skill-list span {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ats-template-structured {
+  padding: 0 38px 38px;
+}
+
+.ats-template-structured header {
+  margin: 0 -38px 28px;
+  padding: 32px 38px;
+  background: #1e3a8a;
+  color: #fff;
+}
+
+.ats-template-structured header strong,
+.ats-template-structured header p {
+  color: #dbeafe;
+}
+
+.ats-template-structured .ats-template-section h4 {
+  color: #1d4ed8;
+}
+
+.ats-template-elegant {
+  padding: 42px;
+}
+
+.ats-template-elegant header {
+  padding-bottom: 18px;
+}
+
+.ats-template-elegant header p {
+  padding: 10px 0;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.ats-template-elegant h2 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ats-template-elegant .ats-template-section h4 {
+  text-align: center;
+  color: #334155;
+}
+
 @media (max-width: 1300px) {
   .resume-template-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -666,5 +1006,42 @@
 
   .resume-preview-header h2 {
     font-size: 1.5rem;
+  }
+
+  .ats-template {
+    min-height: auto;
+  }
+
+  .ats-template-classic,
+  .ats-template-modern,
+  .ats-template-elegant {
+    padding: 24px;
+  }
+
+  .ats-template-structured {
+    padding: 0 24px 24px;
+  }
+
+  .ats-template-structured header {
+    margin: 0 -24px 24px;
+    padding: 26px 24px;
+  }
+
+  .ats-template-executive {
+    grid-template-columns: 1fr;
+  }
+
+  .ats-template-executive aside,
+  .ats-template-executive main {
+    padding: 24px;
+  }
+
+  .ats-template-item-head {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .ats-template-item-head span {
+    white-space: normal;
   }
 }

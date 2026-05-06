@@ -16,13 +16,13 @@ import { fetchCandidateProfile } from "./profileApi";
 import {
   DEFAULT_PROFILE_IMAGE,
   formatDisplayValue,
-  getApiUrl,
   getCandidateFileUrl,
   getResumeFileName,
   getSkillList,
   isPdfResume,
   normalizeCandidate,
 } from "./profileUtils";
+import { API_BASE_URL } from "../../../config";
 import "./CandidateProfile.css";
 
 export default function CandidateProfileView() {
@@ -77,10 +77,12 @@ export default function CandidateProfileView() {
 
   const profileImage =
     getCandidateFileUrl(candidate.profilePic) || DEFAULT_PROFILE_IMAGE;
-  const resumeUrl =
-    getApiUrl(candidate.resumeUrl) || getCandidateFileUrl(candidate.resumePath);
-  const resumeDownloadUrl =
-    getApiUrl(candidate.resumeDownloadUrl) || resumeUrl;
+  const resumeUrl = candidate.resumePath
+    ? `${API_BASE_URL}/candidates/me/resume?disposition=inline`
+    : "";
+  const resumeDownloadUrl = candidate.resumePath
+    ? `${API_BASE_URL}/candidates/me/resume?disposition=attachment`
+    : "";
   const resumeName = getResumeFileName(candidate.resumePath);
   const skills = getSkillList(candidate.skills);
 
